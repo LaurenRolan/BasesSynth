@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/rubik.dir/rubik/main.cpp.o CMakeFiles/rubik.dir/rubik/RubikApplication.cpp.o CMakeFiles/rubik.dir/rubik/RubikRenderer.cpp.o CMakeFiles/rubik.dir/rubik/RubikLogic.cpp.o CMakeFiles/rubik.dir/rubik/GameStage.cpp.o CMakeFiles/rubik.dir/rubik/TextPrinter.cpp.o  -o rubik libutils.a -lglfw -lGL -lGLU -lGLEW 

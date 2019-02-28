@@ -1,0 +1,6 @@
+/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/rebuild_cache.dir
+/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/doc_doxygen.dir
+/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/edit_cache.dir
+/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/rubik.dir
+/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/utils.dir
+/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/glitter.dir
