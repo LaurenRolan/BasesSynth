@@ -205,32 +205,66 @@ bool Program::bound() const
 
 Texture::Texture(GLenum target) : m_location(0), m_target(target)
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must allocate GPU memory for this instance" << std::endl;
-  assert(false);
+    //At construction the GPU memory must be allocated, and the target must be recorded.
+    glGenTextures(1, &m_location);
 }
 
 Texture::~Texture()
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must release GPU memory for this instance" << std::endl;
-  assert(false);
+  // At destruction, GPU memory must be released.
+    glDeleteTextures(1, &m_location);
 }
 
 void Texture::bind() const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must bind the underlying GPU object to the openGL state" << std::endl;
-  assert(false);
+  // binds this Texture to the current state (more precisely to the currently active texture)
+  glBindTexture(m_target, m_location);
 }
 
 void Texture::unbind() const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must unbind the underlying GPU object from the openGL state" << std::endl;
-  assert(false);
+  glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 template <> void Texture::setData<GLubyte>(const Image<GLubyte> & image, bool mipmaps) const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation (look at the documentation in the header)" << std::endl;
-  assert(false);
+    /* It should bind this texture, and send the data to it and then unbind the texture.
+     * You should take care of calling the correct ::glTexImage function depending on
+     * the texture target. You should at least handle GL_TEXTURE_2D and GL_TEXTURE_3D
+     */
+    bind();
+    if(m_target == GL_TEXTURE_2D) {
+        switch(image.channels) {
+            case 1:
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+            case 2:
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RG, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+            case 3:
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+            case 4:
+                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+        }
+    } else if (m_target == GL_TEXTURE_3D) {
+        switch(image.channels) {
+            case 1:
+                glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+            case 2:
+                glTexImage3D(GL_TEXTURE_3D, 0, GL_RG, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+            case 3:
+                glTexImage3D(GL_TEXTURE_3D, 0, GL_RGB, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+            case 4:
+                glTexImage3D(GL_TEXTURE_3D, 0, GL_RGBA, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
+                break;
+        }
+    }
+    unbind();
 }
 
 Sampler::Sampler(int texUnit) : m_location(0), m_texUnit(texUnit)
