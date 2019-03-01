@@ -21,36 +21,36 @@ PA3Application::PA3Application(int windowWidth, int windowHeight)
   makeAShell(40, 40);
 }
 
-int getIndex(int i, int j, int col)
-{
-    return i * col + j;
-}
 
 std::shared_ptr<VAO> PA3Application::makeParamSurf(DiscreteLinRange rgPhi, DiscreteLinRange rgTheta, const std::function<glm::vec3(float, float)> & posFunc, bool isCyclicInPhi, bool isCyclicInTheta)
 {
+  auto getIndex = [](uint i, uint j, uint col, uint row) { return (i % row) * col + (j % col); };
   std::vector<glm::vec3> positions;
   std::vector<glm::vec3> colors;
   std::vector<uint> ibo;
 
   float phi;
   float theta;
-  for(int k_phi = 0; k_phi < rgPhi.nbVals; k_phi++)
+  for(uint k_phi = 0; k_phi < rgPhi.nbVals; k_phi++)
   {
-      for(int k_theta = 0; k_theta < rgTheta.nbVals; k_theta++)
+      for(uint k_theta = 0; k_theta < rgTheta.nbVals; k_theta++)
       {
           phi = rgPhi.value(k_phi);
           theta = rgTheta.value(k_theta);
           positions.push_back(posFunc(phi, theta));
+          colors.push_back({1, 0, 1});
 
-          if((k_phi <= rgPhi.nbVals - 2 || isCyclicInPhi) && (k_theta <= rgTheta.nbVals - 2 || isCyclicInTheta) )
+          if( (k_phi <= rgPhi.nbVals - 2 || isCyclicInPhi) && (k_theta <= rgTheta.nbVals - 2 || isCyclicInTheta) )
           {
-              ibo.push_back(getIndex(k_phi, k_theta, rgTheta.nbVals));
-              ibo.push_back(getIndex(k_phi + 1, k_theta, rgTheta.nbVals));
-              ibo.push_back(getIndex(k_phi, k_theta + 1, rgTheta.nbVals));
+              //Traingle 1
+              ibo.push_back(getIndex(k_phi, k_theta, rgTheta.nbVals, rgPhi.nbVals));
+              ibo.push_back(getIndex(k_phi + 1, k_theta, rgTheta.nbVals, rgPhi.nbVals));
+              ibo.push_back(getIndex(k_phi, k_theta + 1, rgTheta.nbVals, rgPhi.nbVals));
 
-              ibo.push_back(getIndex(k_phi, k_theta + 1, rgTheta.nbVals));
-              ibo.push_back(getIndex(k_phi + 1, k_theta, rgTheta.nbVals));
-              ibo.push_back(getIndex(k_phi + 1, k_theta + 1, rgTheta.nbVals));
+              //Traingle 2
+              ibo.push_back(getIndex(k_phi, k_theta + 1, rgTheta.nbVals, rgPhi.nbVals));
+              ibo.push_back(getIndex(k_phi + 1, k_theta, rgTheta.nbVals, rgPhi.nbVals));
+              ibo.push_back(getIndex(k_phi + 1, k_theta + 1, rgTheta.nbVals, rgPhi.nbVals));
           }
       }
   }
@@ -75,10 +75,11 @@ void PA3Application::makeASphere(unsigned int nbPhi, unsigned int nbTheta)
 
 void PA3Application::makeATorus(unsigned int nbPhi, unsigned int nbTheta, float smallRadius)
 {
-  std::shared_ptr<VAO> vao;
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation here (look at the documentation in the header)" << std::endl;
-  assert(false);
-
+  auto posFunc = [smallRadius](float phi, float theta) { return glm::vec3((4 * smallRadius + smallRadius * cos(phi)) * cos(theta),
+                                                               (4 * smallRadius + smallRadius * cos(phi)) * sin(theta),
+                                                               smallRadius * sin(phi)); };
+  const float pi = glm::pi<float>();
+  std::shared_ptr<VAO> vao = makeParamSurf(DiscreteLinRange(nbPhi, 0, 2 * pi), DiscreteLinRange(nbTheta, 0, 2 * pi), posFunc, true, false);
   glm::mat4 mw(1);
   mw = glm::translate(mw, {0.5, 0, 0});
   mw = glm::rotate(mw, 3 * glm::pi<float>() / 4, {1, 0, 1});
