@@ -107,12 +107,14 @@ void PA3Application::initGLState() const
 
   glEnable(GL_CULL_FACE);
 
+  glEnable(GL_DEPTH_TEST);
+
 }
 
 void PA3Application::renderFrame()
 {
   std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation here (look at the documentation in the header)" << std::endl;
-  glClear(GL_COLOR_BUFFER_BIT);
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
   m_program.bind();
   for (const auto & vao : m_vaos) {
     vao->updateProgram(m_program, m_proj, m_view);
