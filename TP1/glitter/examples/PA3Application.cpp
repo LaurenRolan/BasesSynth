@@ -102,8 +102,11 @@ void PA3Application::makeAShell(unsigned int nbPhi, unsigned int nbTheta)
 
 void PA3Application::initGLState() const
 {
+  // Activate the back face culling and the depth test.
   glClearColor(1, 1, 1, 1);
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation here (look at the documentation in the header)" << std::endl;
+
+  glEnable(GL_CULL_FACE);
+  glCullFace(GL_FRONT);
 }
 
 void PA3Application::renderFrame()
