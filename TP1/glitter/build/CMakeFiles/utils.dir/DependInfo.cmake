@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/src/Application.cpp" "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/utils.dir/src/Application.cpp.o"
-  "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/src/ObjLoader.cpp" "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/utils.dir/src/ObjLoader.cpp.o"
-  "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/src/glApi.cpp" "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/utils.dir/src/glApi.cpp.o"
-  "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/src/utils.cpp" "/home/lauren/Desktop/basessyntheseimage/TP1/glitter/build/CMakeFiles/utils.dir/src/utils.cpp.o"
+  "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/Application.cpp" "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/build/CMakeFiles/utils.dir/src/Application.cpp.o"
+  "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/ObjLoader.cpp" "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/build/CMakeFiles/utils.dir/src/ObjLoader.cpp.o"
+  "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/glApi.cpp" "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/build/CMakeFiles/utils.dir/src/glApi.cpp.o"
+  "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/utils.cpp" "/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/build/CMakeFiles/utils.dir/src/utils.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "RESOURCE_DIR=\"/home/lauren/Desktop/basessyntheseimage/TP1/glitter\""
+  "RESOURCE_DIR=\"/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter\""
   )
 
 # The include file search paths:

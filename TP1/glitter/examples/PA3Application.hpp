@@ -8,6 +8,8 @@
 // forward declarations
 struct GLFWwindow;
 
+int getIndex(int i, int j, int col);
+
 /// A concrete implementation of Application for PA1
 class PA3Application : public Application {
 public:

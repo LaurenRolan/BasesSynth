@@ -21,13 +21,39 @@ PA3Application::PA3Application(int windowWidth, int windowHeight)
   makeAShell(40, 40);
 }
 
+int getIndex(int i, int j, int col)
+{
+    return i * col + j;
+}
+
 std::shared_ptr<VAO> PA3Application::makeParamSurf(DiscreteLinRange rgPhi, DiscreteLinRange rgTheta, const std::function<glm::vec3(float, float)> & posFunc, bool isCyclicInPhi, bool isCyclicInTheta)
 {
   std::vector<glm::vec3> positions;
   std::vector<glm::vec3> colors;
   std::vector<uint> ibo;
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation here (look at the documentation in the header)" << std::endl;
-  assert(false);
+
+  float phi;
+  float theta;
+  for(int k_phi = 0; k_phi < rgPhi.nbVals; k_phi++)
+  {
+      for(int k_theta = 0; k_theta < rgTheta.nbVals; k_theta++)
+      {
+          phi = rgPhi.value(k_phi);
+          theta = rgTheta.value(k_theta);
+          positions.push_back(posFunc(phi, theta));
+
+          if((k_phi <= rgPhi.nbVals - 2 || isCyclicInPhi) && (k_theta <= rgTheta.nbVals - 2 || isCyclicInTheta) )
+          {
+              ibo.push_back(getIndex(k_phi, k_theta, rgTheta.nbVals));
+              ibo.push_back(getIndex(k_phi + 1, k_theta, rgTheta.nbVals));
+              ibo.push_back(getIndex(k_phi, k_theta + 1, rgTheta.nbVals));
+
+              ibo.push_back(getIndex(k_phi, k_theta + 1, rgTheta.nbVals));
+              ibo.push_back(getIndex(k_phi + 1, k_theta, rgTheta.nbVals));
+              ibo.push_back(getIndex(k_phi + 1, k_theta + 1, rgTheta.nbVals));
+          }
+      }
+  }
 
   std::shared_ptr<VAO> vao(new VAO(2));
   vao->setVBO(0, positions);
