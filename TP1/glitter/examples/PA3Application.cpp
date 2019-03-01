@@ -106,7 +106,7 @@ void PA3Application::initGLState() const
   glClearColor(1, 1, 1, 1);
 
   glEnable(GL_CULL_FACE);
-  glCullFace(GL_FRONT);
+
 }
 
 void PA3Application::renderFrame()
