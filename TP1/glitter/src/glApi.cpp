@@ -273,7 +273,8 @@ void Sampler::unbind() const
 
 void Sampler::attachToProgram(const Program & prog, const std::string & samplerName, BindOption bindOption) const
 {
-    prog.setUniform(samplerName, m_texUnit);
+    if(bindOption != DoNotBind)
+        prog.setUniform(samplerName, m_texUnit);
 }
 
 void Sampler::attachTexture(const Texture & texture) const
