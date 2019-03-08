@@ -1,0 +1,6 @@
+/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/CMakeFiles/rebuild_cache.dir
+/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/CMakeFiles/doc_doxygen.dir
+/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/CMakeFiles/edit_cache.dir
+/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/CMakeFiles/rubik.dir
+/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/CMakeFiles/utils.dir
+/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/CMakeFiles/glitter.dir

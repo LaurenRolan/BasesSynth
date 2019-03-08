@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="GLITTER" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\docs\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="doc_doxygen">
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 doc_doxygen" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rubik">
+         <Option output="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/rubik" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRESOURCE_DIR=&quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter&quot;" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/stb" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/termcolor/include" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/tinyobjloader" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/ext/glm" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 rubik" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rubik/fast">
+         <Option output="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/rubik" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRESOURCE_DIR=&quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter&quot;" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/stb" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/termcolor/include" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/tinyobjloader" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/ext/glm" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 rubik/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="utils">
+         <Option output="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/libutils.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRESOURCE_DIR=&quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter&quot;" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/stb" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/termcolor/include" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/tinyobjloader" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/ext/glm" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 utils" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="utils/fast">
+         <Option output="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/libutils.a" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option object_output="./" />
+         <Option type="2" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRESOURCE_DIR=&quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter&quot;" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/stb" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/termcolor/include" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/tinyobjloader" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/ext/glm" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 utils/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glitter">
+         <Option output="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/glitter" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRESOURCE_DIR=&quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter&quot;" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/stb" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/termcolor/include" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/tinyobjloader" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/ext/glm" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 glitter" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="glitter/fast">
+         <Option output="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/glitter" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DRESOURCE_DIR=&quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter&quot;" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/stb" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/termcolor/include" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/./ext/tinyobjloader" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/ext/glm" />
+            <Add directory="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src" />
+            <Add directory="/usr/include" />
+            <Add directory="/usr/include/c++/5" />
+            <Add directory="/usr/include/c++/5/backward" />
+            <Add directory="/usr/include/x86_64-linux-gnu" />
+            <Add directory="/usr/include/x86_64-linux-gnu/c++/5" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include" />
+            <Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 glitter/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter-build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA1Application.cpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA1Application.hpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA2Application.cpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA2Application.hpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA3Application.cpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA3Application.hpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA4Application.cpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA4Application.hpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA5Application.cpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/PA5Application.hpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/examples/main.cpp">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/GameStage.cpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/GameStage.hpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/RubikApplication.cpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/RubikApplication.hpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/RubikLogic.cpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/RubikLogic.hpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/RubikRenderer.cpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/RubikRenderer.hpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/TextPrinter.cpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/TextPrinter.hpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/font.f.glsl">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/font.v.glsl">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/hud.f.glsl">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/hud.v.glsl">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/main.cpp">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/rubik.f.glsl">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/rubik/rubik.v.glsl">
+         <Option target="rubik"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simple.f.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simple.v.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simple2d.f.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simple2d.v.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simple3d.f.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simple3d.v.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simplemat.f.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/simplemat.v.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/texture.f.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/shaders/texture.v.glsl">
+         <Option target="glitter"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/Application.cpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/Application.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/AttributeProperties.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/Image.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/ObjLoader.cpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/ObjLoader.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/SimpleMaterial.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/glApi.cpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/glApi.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/utils.cpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/src/utils.hpp">
+         <Option target="utils"/>
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/external.cmake">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="/home/eleves/promo20/info/lrolan/Bureau/baseimg/TP1/glitter/docs/Doxyfile.in">
+          <Option virtualFolder="CMake Files\docs\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>

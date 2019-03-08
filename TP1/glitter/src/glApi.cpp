@@ -148,7 +148,8 @@ void Program::unbind() const
 
 bool Program::getUniformLocation(const std::string & name, int & location) const
 {
-    return glGetUniformLocation(location, name.c_str());
+    location = glGetUniformLocation(m_location, name.c_str());
+    return location != -1;
 }
 
 template <> void Program::uniformDispatcher(int location, const int & val)
@@ -233,90 +234,67 @@ template <> void Texture::setData<GLubyte>(const Image<GLubyte> & image, bool mi
      * the texture target. You should at least handle GL_TEXTURE_2D and GL_TEXTURE_3D
      */
     bind();
-    if(m_target == GL_TEXTURE_2D) {
-        switch(image.channels) {
-            case 1:
-                glTexImage2D(GL_TEXTURE_2D, 0, GL_RED, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-            case 2:
-                glTexImage2D(GL_TEXTURE_2D, 0, GL_RG, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-            case 3:
-                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-            case 4:
-                glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, image.width, image.height, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-        }
-    } else if (m_target == GL_TEXTURE_3D) {
-        switch(image.channels) {
-            case 1:
-                glTexImage3D(GL_TEXTURE_3D, 0, GL_RED, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-            case 2:
-                glTexImage3D(GL_TEXTURE_3D, 0, GL_RG, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-            case 3:
-                glTexImage3D(GL_TEXTURE_3D, 0, GL_RGB, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-            case 4:
-                glTexImage3D(GL_TEXTURE_3D, 0, GL_RGBA, image.width, image.height, image.depth, 0, GL_BGR, GL_UNSIGNED_BYTE, image.data);
-                break;
-        }
+    GLenum color;
+    switch(image.channels) {
+        case 1: color = GL_RED; break;
+        case 2: color = GL_RG; break;
+        case 3: color = GL_RGB; break;
+        case 4: color = GL_RGBA; break;
     }
+    if(m_target == GL_TEXTURE_2D) {
+        glTexImage2D(GL_TEXTURE_2D, 0, color, image.width, image.height, 0, color, GL_UNSIGNED_BYTE, image.data);
+    } else {
+        glTexImage3D(GL_TEXTURE_3D, 0, color, image.width, image.height, image.depth, 0, color, GL_UNSIGNED_BYTE, image.data);
+    }
+    if(mipmaps)
+        glGenerateMipmap(m_target);
     unbind();
 }
 
 Sampler::Sampler(int texUnit) : m_location(0), m_texUnit(texUnit)
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must allocate GPU memory for this instance" << std::endl;
-  assert(false);
+  glGenSamplers(1, &m_location);
 }
 
 Sampler::~Sampler()
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must release GPU memory for this instance" << std::endl;
-  assert(false);
+  glDeleteSamplers(1, &m_location);
 }
 
 void Sampler::bind() const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must bind the underlying GPU object to the openGL state" << std::endl;
-  assert(false);
+  glBindSampler(m_texUnit, m_location);
 }
 
 void Sampler::unbind() const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must unbind the underlying GPU object from the openGL state" << std::endl;
-  assert(false);
+  glBindSampler(m_texUnit, 0);
 }
 
 void Sampler::attachToProgram(const Program & prog, const std::string & samplerName, BindOption bindOption) const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation (look at the documentation in the header)" << std::endl;
-  assert(false);
+    prog.setUniform(samplerName, m_texUnit);
 }
 
 void Sampler::attachTexture(const Texture & texture) const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation (look at the documentation in the header)" << std::endl;
-  assert(false);
+    glActiveTexture(m_texUnit);
+    texture.bind();
 }
 
 template <> void Sampler::setParameter<int>(GLenum paramName, const int & value) const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must set up the target sampler parameter with the value" << std::endl;
-  assert(false);
+  glSamplerParameteri(m_location, paramName, value);
 }
 
 template <> void Sampler::setParameter<float>(GLenum paramName, const float & value) const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must set up the target sampler parameter with the value" << std::endl;
-  assert(false);
+  glSamplerParameterf(m_location, paramName, value);
 }
 
 void Sampler::enableAnisotropicFiltering() const
 {
-  std::cerr << __PRETTY_FUNCTION__ << ": You must complete the implementation (look at the documentation in the header)" << std::endl;
-  assert(false);
+    float aniso = 0.0f;
+    glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &aniso);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, aniso);
 }
